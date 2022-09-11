@@ -1,0 +1,44 @@
+
+.social-media{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    z-index: 2;
+    display: flex;
+    flex-direction: row-reverse;
+  
+  }
+  .social-media a{
+  height: 0;
+  width: 0 ;
+  }
+  .social-media svg{
+    font-size: 34px;
+    color: rgb(0, 0, 0);
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+  
+  }
+  
+  .social-media-linkedin,.social-media-telegram{
+    display: none;
+  }
+  .social-media-linkedin,.social-media-telegram,.social-media-icon{
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    margin: 0 0 0 15px;
+    opacity: 0.7;
+  }
+  
+  
+  
+  .social-media-linkedin-open,.social-media-telegram-open,.social-media-icon-open{
+  
+    transition: all 700ms;
+    margin: 0 15px;
+    opacity: 1;
+    }

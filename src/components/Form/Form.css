@@ -1,0 +1,138 @@
+.form-container{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    width: 500px;
+
+
+}
+.form{
+    width: 100%;
+
+}
+.form input,.form textarea{
+    width: 100%;
+    padding: 16px 3px;
+    margin: 0 0 30px 0;
+    background-color: transparent !important;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    -webkit-appearance: none;
+    appearance: none;
+    font-size: 16px;
+    color: #fff;
+
+}
+
+.form textarea{
+    resize: vertical; 
+    min-height: 70px;
+    max-height: 120px;
+}
+.form input::placeholder,.form textarea::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fff;
+
+  }
+  
+.form input:-ms-input-placeholder,.form textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #fff;
+  }
+  
+.form input::-ms-input-placeholder,.form textarea::-ms-input-placeholder  { /* Microsoft Edge */
+    color: #fff;
+  }
+
+  .form button{
+    width: 100%;
+    padding: 16px 0;
+    margin: 30px 0 0 0;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    font-size: 16px;
+   
+    color: #fff;
+    cursor: pointer;
+  }
+
+.input-container {
+  position: relative;
+
+}
+.input-container div{
+  position: absolute;
+  color: #fff;
+  right: 0;
+  top: 20%;
+  font-size: 20px;
+  right: 3px;
+}
+.input-container svg{
+
+  color: #fff;
+
+  font-size: 18px;
+
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  font-family: inherit;
+  width: 120px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #121212;
+  text-align: center;
+  border-radius: 3px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  padding: 5px 2px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  font-family: inherit;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+
+  border-color: rgb(255, 255, 255) transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  font-family: inherit;
+}
+.toast-form{
+  border-radius: 3px !important;
+  color: #121212fc !important;
+  background-color: #fff !important;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: rgb(255, 255, 255) !important;
+  background-color: #121212fc;
+  color: #fff;
+}
