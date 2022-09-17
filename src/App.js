@@ -1,32 +1,33 @@
+import { useEffect, useState } from "react";
 
-import { Route, Routes } from 'react-router-dom';
-import './App.css';
-import ContactUs from './components/ContactUs/ContactUs';
-import Homepage from './components/Homepage/Homepage';
-import Layout from './components/Layout/Layout';
-import Login from './components/Login/Login';
-import Product from './components/Product/Product';
+import "./App.css";
 
-import ProductsList from './components/ProductsList/ProductsList';
-import Register from './components/Register/Register';
+import Layout from "./components/Layout/Layout";
+import Loading from "./components/Loading/Loading";
 
+
+import MainRoutes from "./routes/MainRoutes";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3500);
+  }, []);
+
   return (
-    <div className="App">
-      <Layout>
-      <Routes>
-        <Route path='/' element={<Homepage/>}/>
-        <Route path='/products' element={<ProductsList/>}/>
-        <Route path='/contact-us' element={<ContactUs/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/register' element={<Register/>}/>
-        <Route path='/products/:id' element={<Product/>}/>
-      </Routes>
-
-      </Layout>
-
-    </div>
+    <>
+      {loading ? (
+        <Loading loading={loading} />
+      ) : (
+        <div className="App">
+          <Layout>
+            <MainRoutes />
+          </Layout>
+        </div>
+      )}
+    </>
   );
 }
 

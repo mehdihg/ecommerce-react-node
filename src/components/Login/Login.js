@@ -7,6 +7,8 @@ import Form from "../Form/Form";
 import "./Login.css";
 import { Link } from "react-router-dom";
 import { notify } from "../../utils/notify";
+import MotioAnimate from "../MotionAnimate/MotionAnimte";
+
 
 const Login = () => {
   const InputValues = [
@@ -40,8 +42,9 @@ const Login = () => {
     validationSchema,
   });
   return (
+    <MotioAnimate>
     <div className="form-container login-container">
-      <div className="login-form">
+       <div className="login-form">
         <Form
           formik={formik}
           InputValues={InputValues}
@@ -54,6 +57,7 @@ const Login = () => {
         </Form>
       </div>
     </div>
+    </MotioAnimate>
   );
 };
 export default Login;

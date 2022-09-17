@@ -27,6 +27,7 @@ const MainSlider = () => {
     },
     dots: true,
     dotsClass: "slick-dots slick-thumb",
+    lazyLoad: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -34,19 +35,44 @@ const MainSlider = () => {
   };
   return (
     <div>
+            
       <Slider {...settings}>
+
         <div className="img-slider">
+        <div className="black-layout"></div>
           <img src={nikes} className="shoe-img" alt="nike" />
+          <div className="slider nike-slider-img">
+          <h2>Nike's new collections</h2>
+          <p>Ask us for the best models of Nike sneakers</p>
+
+          <button>Buy Now</button>
+
+          </div>
         </div>
         <div className="img-slider">
+        <div className="black-layout"></div>
           <img src={adidas} className="shoe-img" alt="nike" />
+          <div className="slider adidas-slider-img">
+          <h2>Adidas exclusive collection</h2>
+          <p>The latest original Adidas collections at the best price</p>
+
+          <button>Buy Now</button>
+          </div>
         </div>
         <div className="img-slider">
+        <div className="black-layout"></div>
           <img src={puma} className="shoe-img" alt="nike" />
+          <div className="slider puma-slider-img">
+          <h2>Special Puma sneakers</h2>
+          <p>Special Puma sneakers with the best quality</p>
+
+          <button>Buy Now</button>
+          </div>
+
         </div>
       </Slider>
 
-      <div className="black-layout"></div>
+
 
     </div>
   );

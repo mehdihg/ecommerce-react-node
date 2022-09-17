@@ -3,7 +3,10 @@ import './Navigation.css'
 import { HiHome  ,HiUser,HiShoppingCart } from "react-icons/hi";
 import { GiConverseShoe} from "react-icons/gi"
 import { NavLink } from "react-router-dom";
+import { useSelector } from 'react-redux';
 const Navigation=()=>{
+const state=useSelector(state=>state.reducerCart)
+
 return(
     <header className="header">
 
@@ -25,10 +28,19 @@ return(
             
             </NavLink>
 
-            <NavLink to='/login'className={({ isActive }) =>
-              isActive ? 'activeNav' : ''
+            <NavLink to='/cart'className={({ isActive }) =>
+              isActive ? 'activeNav cart-icon' : 'cart-icon'
             }>
+
             <HiShoppingCart/>
+            {
+                state.total >0 &&
+                <span>
+                {state.total}
+              </span>
+              }
+
+
             </NavLink>
             </div>
             <NavLink to='/login'className={({ isActive }) =>

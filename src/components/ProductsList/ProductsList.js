@@ -1,10 +1,18 @@
 
+import { useEffect } from "react"
+import { useDispatch, useSelector } from "react-redux"
 import { Link } from "react-router-dom"
 import * as data from '../../data'
+import { AddToCart } from "../../provider/CartProvider/cartTypes"
 import Button from "../Form/Button/Button"
+import MotioAnimate from "../MotionAnimate/MotionAnimte"
+
 import ProductSlider from "../ProductSlider/ProductSlider"
 import './ProductsList.css'
 const ProductsList=()=>{
+const dispatch=useDispatch()
+const state=useSelector(state=>state.reducerCart.cart)
+
  /* const[products,setProducts]=useState([])
     useEffect(()=>{
         axios.get('https://nodejs-post-app.herokuapp.com/api/product')
@@ -40,17 +48,23 @@ const ProductsList=()=>{
     transform: translateY(5px);
     box-shadow: inset 0px 10px 20px 2px rgb(0 0 0 / 25%);
     )*/  
+
+
+    console.log(state);
+
     return(
-        <div>
+
                 <ProductSlider>
                 {
+                    
             data.products.map((item)=>{
                 return(
-                    <div className="product-container" key={item.id}>
+                    <MotioAnimate  key={item.id}>
+                    <div className="product-container">
                         <div className="product">
                         <img src={item.image} alt={item.name}  className="product-img"/>
 
-                        <Button className="product-button">add to cart</Button>
+                        <Button className="product-button" onClick={()=>dispatch({type:AddToCart,payload:item})}>add to cart</Button>
                         <Link to={`/products/${item.id}`}>
                         <Button className="product-button">details</Button>
                         </Link>
@@ -58,12 +72,14 @@ const ProductsList=()=>{
                                 
                         </div>
                     </div>
+                    </MotioAnimate>
                 )
             })
+           
            }   
                 </ProductSlider>
 
-        </div>
+        
 
     )
     }

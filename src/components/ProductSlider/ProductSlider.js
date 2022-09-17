@@ -9,10 +9,10 @@ const ProductSlider=({children})=>{
           dotsClass: "slick-dots slick-thumb slick-icons-container",
           infinite: false,
           speed: 500,
-
+          lazyLoad: true,
           slidesToShow: 3,
           slidesToScroll: 3,
-
+          
           initialSlide: 0,
           appendDots: dots => (
             <div>
@@ -46,7 +46,8 @@ const ProductSlider=({children})=>{
               breakpoint: 680,
               settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+                dots: false
               }
             }
           ]
@@ -54,7 +55,7 @@ const ProductSlider=({children})=>{
         return (
           <div className='slick-slider-container'>
             
-            <Slider {...settings}>
+            <Slider {...settings} arrows={false}>
                 {children}
             </Slider>
           </div>

@@ -136,3 +136,10 @@ input:-webkit-autofill:active  {
   background-color: #121212fc;
   color: #fff;
 }
+@media screen and (max-width:540px){
+  .form-container{
+    width: 90%;
+
+
+}
+}

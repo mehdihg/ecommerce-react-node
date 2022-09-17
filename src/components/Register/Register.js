@@ -7,6 +7,7 @@ import Form from "../Form/Form";
 import "./Register.css";
 import { Link } from "react-router-dom";
 import { notify } from "../../utils/notify";
+import MotioAnimate from "../MotionAnimate/MotionAnimte";
 
 const Register = () => {
   const InputValues = [
@@ -50,6 +51,7 @@ const Register = () => {
     validationSchema,
   });
   return (
+    <MotioAnimate>
     <div className="form-container register-container">
       <div className="register-form">
         <Form
@@ -64,6 +66,7 @@ const Register = () => {
         </Form>
       </div>
     </div>
+    </MotioAnimate>
   );
 };
 export default Register;

@@ -6,6 +6,7 @@ import TextArea from "../Form/Textarea/TextArea";
 
 import "./Contact.css";
 import { notify } from "../../utils/notify";
+import MotioAnimate from "../MotionAnimate/MotionAnimte";
 
 
 const ContactUs = () => {
@@ -39,11 +40,13 @@ const ContactUs = () => {
     validationSchema,
   });
   return (
+    <MotioAnimate>
     <div className="form-container contact-container">
       <Form formik={formik} InputValues={InputValues} ButtnText="Send">
         <TextArea formik={formik} />
       </Form>
     </div>
+    </MotioAnimate>
   );
 };
 export default ContactUs;

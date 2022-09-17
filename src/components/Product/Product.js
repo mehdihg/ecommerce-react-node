@@ -4,17 +4,20 @@ import Button from "../Form/Button/Button";
 
 import {TbTruckDelivery,TbShoppingCartDiscount,TbCreditCard } from 'react-icons/tb'
 import "./Product.css";
+import { useDispatch, useSelector } from "react-redux";
+import { AddToCart } from "../../provider/CartProvider/cartTypes";
 const Product = () => {
   const { id } = useParams();
-
+  const dispatch=useDispatch()
+  const state=useSelector(state=>state.reducerCart.cart)
   const product = data.products.find((item) => item.id === Number(id));
-
+console.log(state);
   return (
     <div className="single-product-container">
       <div className="single-product">
         <div className="single-product-content">
           <img src={product.image} alt={product.name} />
-          <Button className="single-product-button">add to cart</Button>
+          <Button className="single-product-button" onClick={()=>dispatch({type:AddToCart,payload:product})}>add to cart</Button>
 
         </div>
         <div className="single-product-details">

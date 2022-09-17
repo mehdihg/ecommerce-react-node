@@ -1,6 +1,6 @@
 
 
-const Button=({children,type,formik,className,FormsBtn})=>{
+const Button=({children,type,formik,className,FormsBtn,onClick})=>{
   
     return(
       <>
@@ -12,7 +12,7 @@ const Button=({children,type,formik,className,FormsBtn})=>{
         )
         :
         (
-        <button type={type} className={className}>
+        <button type={type} className={className} onClick={onClick}>
         {children}
         </button>
         )
