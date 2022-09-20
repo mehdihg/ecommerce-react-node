@@ -15,6 +15,7 @@ const Navigation = () => {
           <NavLink
             to="/"
             className={({ isActive }) => (isActive ? "activeNav" : "")}
+            exact={true}
           >
             <HiHome />
           </NavLink>
