@@ -13,7 +13,7 @@ const MainRoutes = () => {
   return (
     <AnimatePresence>
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Homepage />} />
+        <Route path="/" element={<Homepage />} exact={true} />
         <Route path="/products" element={<ProductsList />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/login" element={<Login />} />
