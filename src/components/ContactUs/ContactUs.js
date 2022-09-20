@@ -8,7 +8,6 @@ import "./Contact.css";
 import { notify } from "../../utils/notify";
 import MotioAnimate from "../MotionAnimate/MotionAnimte";
 
-
 const ContactUs = () => {
   let initialValues = {
     name: "",
@@ -41,13 +40,18 @@ const ContactUs = () => {
   });
   return (
     <MotioAnimate>
-    <div className="form-container contact-container">
-      <div className="contact-form">
-      <Form formik={formik} InputValues={InputValues} ButtnText="Send" title='Contact us'>
-        <TextArea formik={formik} />
-      </Form>
+      <div className="form-container contact-container">
+        <div className="contact-form">
+          <Form
+            formik={formik}
+            InputValues={InputValues}
+            ButtnText="Send"
+            title="Contact us"
+          >
+            <TextArea formik={formik} />
+          </Form>
+        </div>
       </div>
-    </div>
     </MotioAnimate>
   );
 };

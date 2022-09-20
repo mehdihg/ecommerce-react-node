@@ -1,24 +1,16 @@
-
-
-const Button=({children,type,formik,className,FormsBtn,onClick})=>{
-  
-    return(
-      <>
-        {FormsBtn ?
-        (
+const Button = ({ children, type, formik, className, FormsBtn, onClick }) => {
+  return (
+    <>
+      {FormsBtn ? (
         <button type={type} className={className} disabled={formik.isValue}>
-        {children}
+          {children}
         </button>
-        )
-        :
-        (
+      ) : (
         <button type={type} className={className} onClick={onClick}>
-        {children}
+          {children}
         </button>
-        )
-        }
-      </>
-    )
-    
-}
-export default Button
+      )}
+    </>
+  );
+};
+export default Button;

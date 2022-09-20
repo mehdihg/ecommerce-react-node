@@ -1,1 +1,1 @@
-export const baseUrl = window.location.origin + '/sliderIcon';
+export const baseUrl = window.location.origin + "/sliderIcon";

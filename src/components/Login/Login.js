@@ -1,14 +1,13 @@
 import { useFormik } from "formik";
 
 import * as yup from "yup";
-import { HiUserAdd } from "react-icons/hi";
+
 
 import Form from "../Form/Form";
 import "./Login.css";
 import { Link } from "react-router-dom";
 import { notify } from "../../utils/notify";
 import MotioAnimate from "../MotionAnimate/MotionAnimte";
-
 
 const Login = () => {
   const InputValues = [
@@ -43,23 +42,21 @@ const Login = () => {
   });
   return (
     <MotioAnimate>
-    <div className="form-container login-container">
-       <div className="login-form">
-        <Form
-          formik={formik}
-          InputValues={InputValues}
-          autocomplete="off"
-          ButtnText="Login"
-          title='Login'
-        >
-
-        </Form>
-        <div className="account-login-register">
-      <p>Don't have an account? </p>
-      <Link to='/register'> Sign Up</Link>
+      <div className="form-container login-container">
+        <div className="login-form">
+          <Form
+            formik={formik}
+            InputValues={InputValues}
+            autocomplete="off"
+            ButtnText="Login"
+            title="Login"
+          ></Form>
+          <div className="account-login-register">
+            <p>Don't have an account? </p>
+            <Link to="/register"> Sign Up</Link>
+          </div>
+        </div>
       </div>
-      </div>
-    </div>
     </MotioAnimate>
   );
 };

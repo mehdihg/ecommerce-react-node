@@ -1,34 +1,46 @@
 .waviy {
-    position: relative;
-    background-color: #121212;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: close 0.6s ease-out;
-  }
+  position: relative;
+  background-color: #121212;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: close 0.6s ease-out;
+}
 
-  .waviy span {
-    position: relative;
-    display: inline-block;
-    font-size: 40px;
-    color: #fff;
-    text-transform: uppercase;
-    animation: flip 2s infinite;
-    font-family: inherit;
+.waviy span {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  font-family: inherit;
+}
+@keyframes flip {
+  0%,
+  80% {
+    transform: rotateX(360deg);
   }
-  @keyframes flip {
-    0%,80% {
-      transform: rotateX(360deg) 
-    }
+}
+@keyframes close {
+  0% {
+    opacity: 0;
   }
-  @keyframes close {
-
-    0%{opacity: 0;}
-    20%{opacity: 20%;}
-    40%{opacity: 40%;}
-    60%{opacity: 60%;}
-    80%{opacity: 80%;}
-    100%{opacity: 100%;}
+  20% {
+    opacity: 20%;
   }
+  40% {
+    opacity: 40%;
+  }
+  60% {
+    opacity: 60%;
+  }
+  80% {
+    opacity: 80%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}

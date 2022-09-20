@@ -5,7 +5,6 @@ import "./App.css";
 import Layout from "./components/Layout/Layout";
 import Loading from "./components/Loading/Loading";
 
-
 import MainRoutes from "./routes/MainRoutes";
 
 function App() {

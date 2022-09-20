@@ -1,5 +1,5 @@
 import { toast } from "react-toastify";
 
-export const notify=(msg)=>{
-    toast.success(msg, { className: "toast-form" });
-}
+export const notify = (msg) => {
+  toast.success(msg, { className: "toast-form" });
+};

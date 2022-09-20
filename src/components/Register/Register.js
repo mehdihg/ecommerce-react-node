@@ -2,7 +2,6 @@ import { useFormik } from "formik";
 
 import * as yup from "yup";
 
-
 import Form from "../Form/Form";
 import "./Register.css";
 import { Link } from "react-router-dom";
@@ -52,23 +51,21 @@ const Register = () => {
   });
   return (
     <MotioAnimate>
-    <div className="form-container register-container">
-      <div className="register-form">
-        <Form
-          formik={formik}
-          InputValues={InputValues}
-          autocomplete="off"
-          ButtnText="Register"
-          title='Register'
-        >
-
-        </Form>
-        <div className="account-login-register">
-      <p>Do you have an account? </p>
-      <Link to='/login'> Login</Link>
+      <div className="form-container register-container">
+        <div className="register-form">
+          <Form
+            formik={formik}
+            InputValues={InputValues}
+            autocomplete="off"
+            ButtnText="Register"
+            title="Register"
+          ></Form>
+          <div className="account-login-register">
+            <p>Do you have an account? </p>
+            <Link to="/login"> Login</Link>
+          </div>
+        </div>
       </div>
-      </div>
-    </div>
     </MotioAnimate>
   );
 };

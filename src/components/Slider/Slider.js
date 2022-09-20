@@ -7,12 +7,9 @@ import nikes from "./sliderImg/air.jpg";
 import puma from "./sliderImg/nbb.jpg";
 import adidas from "./sliderImg/sadi.jpg";
 
-
 import { Link } from "react-router-dom";
 
 const MainSlider = () => {
-
-
   const settings = {
     customPaging: function (i) {
       return (
@@ -35,47 +32,41 @@ const MainSlider = () => {
   };
   return (
     <div>
-            
       <Slider {...settings}>
-
         <div className="img-slider">
-        <div className="black-layout"></div>
+          <div className="black-layout"></div>
           <img src={nikes} className="shoe-img" alt="nike" />
           <div className="slider nike-slider-img">
-          <h2>Nike's new collections</h2>
-          <p>Ask us for the best models of Nike sneakers</p>
-          <Link to='/products'>
-          <button>Buy Now</button>
-          </Link>
+            <h2>Nike's new collections</h2>
+            <p>Ask us for the best models of Nike sneakers</p>
+            <Link to="/products">
+              <button>Buy Now</button>
+            </Link>
           </div>
         </div>
         <div className="img-slider">
-        <div className="black-layout"></div>
+          <div className="black-layout"></div>
           <img src={adidas} className="shoe-img" alt="nike" />
           <div className="slider adidas-slider-img">
-          <h2>Adidas exclusive collection</h2>
-          <p>The latest original Adidas collections at the best price</p>
-          <Link to='/products'>
-          <button>Buy Now</button>
-          </Link>
+            <h2>Adidas exclusive collection</h2>
+            <p>The latest original Adidas collections at the best price</p>
+            <Link to="/products">
+              <button>Buy Now</button>
+            </Link>
           </div>
         </div>
         <div className="img-slider">
-        <div className="black-layout"></div>
+          <div className="black-layout"></div>
           <img src={puma} className="shoe-img" alt="nike" />
           <div className="slider puma-slider-img">
-          <h2>Special Puma sneakers</h2>
-          <p>Special Puma sneakers with the best quality</p>
-          <Link to='/products'>
-          <button>Buy Now</button>
-          </Link>
+            <h2>Special Puma sneakers</h2>
+            <p>Special Puma sneakers with the best quality</p>
+            <Link to="/products">
+              <button>Buy Now</button>
+            </Link>
           </div>
-
         </div>
       </Slider>
-
-
-
     </div>
   );
 };

@@ -9,43 +9,43 @@ const Navigation = () => {
 
   return (
     <>
-    <header className="header">
-      <nav>
-        <div className="nav">
-          <NavLink
-            to="/"
-            className={({ isActive }) => (isActive ? "activeNav" : "")}
-            exact="true"
-          >
-            <HiHome />
-          </NavLink>
+      <header className="header">
+        <nav>
+          <div className="nav">
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "activeNav" : "")}
+              exact="true"
+            >
+              <HiHome />
+            </NavLink>
 
+            <NavLink
+              to="/products"
+              className={({ isActive }) => (isActive ? "activeNav" : "")}
+            >
+              <GiConverseShoe />
+            </NavLink>
+
+            <NavLink
+              to="/cart"
+              className={({ isActive }) =>
+                isActive ? "activeNav cart-icon" : "cart-icon"
+              }
+            >
+              <HiShoppingCart />
+              {state.total > 0 && <span>{state.total}</span>}
+            </NavLink>
+          </div>
           <NavLink
-            to="/products"
+            to="/login"
             className={({ isActive }) => (isActive ? "activeNav" : "")}
           >
-            <GiConverseShoe />
+            <HiUser className="user_icon" />
           </NavLink>
-
-          <NavLink
-            to="/cart"
-            className={({ isActive }) =>
-              isActive ? "activeNav cart-icon" : "cart-icon"
-            }
-          >
-            <HiShoppingCart />
-            {state.total > 0 && <span>{state.total}</span>}
-          </NavLink>
-        </div>
-        <NavLink
-          to="/login"
-          className={({ isActive }) => (isActive ? "activeNav" : "")}
-        >
-          <HiUser className="user_icon" />
-        </NavLink>
-      </nav>
-    </header>
-    <MobileNavigation/>
+        </nav>
+      </header>
+      <MobileNavigation />
     </>
   );
 };

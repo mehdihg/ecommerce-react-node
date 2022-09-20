@@ -1,24 +1,23 @@
-.login-container{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 50px auto;
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 50px auto;
 }
-.login-form{
-    position: relative;
-    width: 500px;
-    height: 500px;
+.login-form {
+  position: relative;
+  width: 500px;
+  height: 500px;
 }
 
-.register-icon{
-
-    font-size: 24px;
+.register-icon {
+  font-size: 24px;
 }
-@media screen and (max-width:540px){
-    .login-container{
-        width: 90%;
-        margin: 20px auto;
-    }
+@media screen and (max-width: 540px) {
+  .login-container {
+    width: 90%;
+    margin: 20px auto;
+  }
 }

@@ -1,5 +1,3 @@
-
-
 export const products = [
   {
     id: 1,
@@ -12,7 +10,8 @@ export const products = [
     price: 120,
     offPrice: 120,
     discount: 0,
-    image: "https://s6.uupload.ir/files/daniel-storek-jm-qked1gmi-unsplash_ja2.jpg",
+    image:
+      "https://s6.uupload.ir/files/daniel-storek-jm-qked1gmi-unsplash_ja2.jpg",
   },
 
   {
@@ -26,7 +25,8 @@ export const products = [
     price: 99,
     offPrice: 89,
     discount: 10,
-    image: "https://s6.uupload.ir/files/maksim-larin-nopsc3nwtzy-unsplash_i0j6.jpg",
+    image:
+      "https://s6.uupload.ir/files/maksim-larin-nopsc3nwtzy-unsplash_i0j6.jpg",
   },
   {
     id: 4,
@@ -52,7 +52,8 @@ export const products = [
     price: 150,
     offPrice: 150,
     discount: 0,
-    image: "https://s6.uupload.ir/files/maksim-larin-ezdrvza1hzw-unsplash_nm8f.jpg",
+    image:
+      "https://s6.uupload.ir/files/maksim-larin-ezdrvza1hzw-unsplash_nm8f.jpg",
   },
   {
     id: 6,
@@ -65,7 +66,7 @@ export const products = [
     price: 220,
     offPrice: 200,
     discount: 13,
-    image: "https://s6.uupload.ir/files/luis-felipe-lins-j2-waqdckus-unsplash_ku8a.jpg",
+    image:
+      "https://s6.uupload.ir/files/luis-felipe-lins-j2-waqdckus-unsplash_ku8a.jpg",
   },
 ];
-

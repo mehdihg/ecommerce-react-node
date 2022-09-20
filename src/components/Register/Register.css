@@ -1,24 +1,23 @@
-.register-container{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+.register-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 20px auto;
+}
+.register-form {
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+
+.login-icon {
+  font-size: 24px;
+}
+@media screen and (max-width: 540px) {
+  .register-container {
+    width: 90%;
     margin: 20px auto;
-}
-.register-form{
-    position: relative;
-    width: 500px;
-    height: 500px;
-}
-
-.login-icon{
-
-    font-size: 24px;
-}
-@media screen and (max-width:540px){
-    .register-container{
-        width: 90%;
-        margin: 20px auto;
-    }
+  }
 }

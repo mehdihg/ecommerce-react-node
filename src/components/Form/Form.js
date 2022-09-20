@@ -4,12 +4,18 @@ import Input from "./Input/Input";
 import "react-toastify/dist/ReactToastify.css";
 import Button from "./Button/Button";
 import { ToastContainer } from "react-toastify";
-import { Link } from "react-router-dom";
 
-const Form = ({ InputValues, formik, children, autocomplete, ButtnText, title }) => {
+
+const Form = ({
+  InputValues,
+  formik,
+  children,
+  autocomplete,
+  ButtnText,
+  title,
+}) => {
   return (
     <>
-
       <h3 className="title-form">{title}</h3>
 
       <form
@@ -22,11 +28,10 @@ const Form = ({ InputValues, formik, children, autocomplete, ButtnText, title })
         })}
 
         {children}
-        <Button formik={formik} type='submit' FormsBtn>
+        <Button formik={formik} type="submit" FormsBtn>
           {ButtnText}
         </Button>
       </form>
-
 
       <ToastContainer
         position="bottom-right"
