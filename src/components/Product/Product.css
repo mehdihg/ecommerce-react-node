@@ -62,3 +62,36 @@ color: #fff;
 
     font-size: 26px;
 } 
+@media screen and (max-width:768px) {
+    .single-product{
+        flex-direction: column;
+    }
+    .single-product-content{
+        width: 100%;
+
+    }
+    .single-product-details{
+        width: 100%;
+        padding: 0;
+        margin: 25px 0 5px 0;
+    }
+    .single-product-details h3{
+        padding: 10px 2px 25px 2px;
+       font-size: 24px;
+    }
+
+    .single-product-container {
+        width: 90%;
+        height: 70vh;
+        margin: 95px auto 15px auto;
+        overflow: auto ;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .single-product-container{
+        width: 90%;
+    }
+    .single-product-content{
+        width: 45%;
+    }
+}

@@ -1,7 +1,7 @@
 import { useFormik } from "formik";
 
 import * as yup from "yup";
-import { HiUser } from "react-icons/hi";
+
 
 import Form from "../Form/Form";
 import "./Register.css";
@@ -59,11 +59,14 @@ const Register = () => {
           InputValues={InputValues}
           autocomplete="off"
           ButtnText="Register"
+          title='Register'
         >
-          <Link to="/Login">
-            <HiUser className="login-icon" />
-          </Link>
+
         </Form>
+        <div className="account-login-register">
+      <p>Do you have an account? </p>
+      <Link to='/login'> Login</Link>
+      </div>
       </div>
     </div>
     </MotioAnimate>

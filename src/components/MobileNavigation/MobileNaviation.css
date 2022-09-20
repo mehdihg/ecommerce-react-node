@@ -1,0 +1,110 @@
+.mobile-header{
+    width: 100%;
+    height: 60px;
+    z-index: 99999;
+    top: 0;
+    background: transparent;
+    position: absolute;
+    display: none;
+}
+.mobile-nav{
+    position: absolute;
+    width: 100%;
+}
+.mobile-burger{
+    z-index: 99999999;
+    width: 36px;
+    height: 36px;
+    margin: 15px 20px;
+    background: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 50%;
+    flex-direction: column;
+    padding: 6px;
+}
+
+.mobile-burger div{
+    height: 4px;
+    width: 20px;
+    background-color: #000000f7;
+    border-radius: 3px;
+
+}
+.mobile-burger.open div:nth-child(1){
+    transform: rotate(45deg) translate(5px ,5px);
+    transition: ease-out 0.5s;
+}
+.mobile-burger.open div:nth-child(2){
+    transform: scale(0.1);
+    transition: ease-out 0.5s;
+}
+.mobile-burger.open div:nth-child(3){
+    transform: rotate(135deg) translate(-5px ,5px);
+    transition: ease-out 0.5s;
+}
+.mobile-burger.closed div:nth-child(1){
+    transform: rotate(0) translate(0 ,0);
+    transition: ease-out 0.5s;
+}
+.mobile-burger.closed div:nth-child(2){
+    transform: scale(1);
+    transition: ease-out 0.5s;
+}
+.mobile-burger.closed div:nth-child(3){
+    transform: rotate(0) translate(0 ,0);
+    transition: ease-out 0.5s;
+}
+.mobile-list{
+    width: 100%;
+    height: 100vh;
+
+}
+.mobile-list.closed{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: -100%;
+    bottom: 0;
+    background: #121212c5;
+    z-index: 9999;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-out ;
+}
+.mobile-list.open{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    left: 0%;
+    bottom: 0;
+    background: #121212c5;
+    z-index: 9999;
+    transform: translateX(0%);
+    transition: all 0.5s ease-out ;
+}
+.mobile-list li{
+    width: 50%;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+    padding: 15px 0;
+    margin: 4px 0;
+    border-bottom: 1px solid #fff;
+}
+.mobile-list li a{
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+
+}
+@media screen and (max-width:540px) {
+    .mobile-header{
+        display: block;
+    }
+}

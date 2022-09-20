@@ -7,6 +7,7 @@ import Register from "../components/Register/Register"
 import Product from "../components/Product/Product"
 import { AnimatePresence } from "framer-motion"
 import Cart from "../components/Cart/Cart"
+import Checkout from "../components/Checkout/Checkout"
 const MainRoutes=()=>{
     const location=useLocation()
     return(
@@ -19,6 +20,7 @@ const MainRoutes=()=>{
 <Route path="/register" element={<Register />} />
 <Route path="/products/:id" element={<Product />} />
 <Route path="/cart" element={<Cart />} />
+<Route path="/checkout" element={<Checkout />} />
 </Routes>
 </AnimatePresence> 
     )

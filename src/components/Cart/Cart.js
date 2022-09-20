@@ -70,9 +70,12 @@ const Cart = () => {
           </div>
           <div className="checkout-details">
             <h4>Price:{state.totalPrice}$</h4>
-            <h4>Shipping:{state.totalPrice}$</h4>
-            <h4>TotalPrice:{state.totalPrice}$</h4>
+            <h4 className="shipping-cart">Shipping:20$</h4>
+            <h4>TotalPrice:{state.totalPrice + 20}$</h4>
+            <Link to='/checkout'>
             <Button>Checkout</Button>
+            </Link>
+
           </div>
         </div>
       </div>

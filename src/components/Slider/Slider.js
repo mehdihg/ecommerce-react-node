@@ -44,9 +44,9 @@ const MainSlider = () => {
           <div className="slider nike-slider-img">
           <h2>Nike's new collections</h2>
           <p>Ask us for the best models of Nike sneakers</p>
-
+          <Link to='/products'>
           <button>Buy Now</button>
-
+          </Link>
           </div>
         </div>
         <div className="img-slider">
@@ -55,8 +55,9 @@ const MainSlider = () => {
           <div className="slider adidas-slider-img">
           <h2>Adidas exclusive collection</h2>
           <p>The latest original Adidas collections at the best price</p>
-
+          <Link to='/products'>
           <button>Buy Now</button>
+          </Link>
           </div>
         </div>
         <div className="img-slider">
@@ -65,8 +66,9 @@ const MainSlider = () => {
           <div className="slider puma-slider-img">
           <h2>Special Puma sneakers</h2>
           <p>Special Puma sneakers with the best quality</p>
-
+          <Link to='/products'>
           <button>Buy Now</button>
+          </Link>
           </div>
 
         </div>

@@ -1,6 +1,21 @@
 .contact-container{
- margin: 150px auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
 }
-
+.contact-form{
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+@media screen and (max-width:540px){
+    .contact-container{
+        width: 90%;
+        margin: 0 auto;
+    }
+}
 
 

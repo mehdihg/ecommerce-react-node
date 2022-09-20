@@ -50,11 +50,14 @@ const Login = () => {
           InputValues={InputValues}
           autocomplete="off"
           ButtnText="Login"
+          title='Login'
         >
-          <Link to="/register">
-            <HiUserAdd className="register-icon" />
-          </Link>
+
         </Form>
+        <div className="account-login-register">
+      <p>Don't have an account? </p>
+      <Link to='/register'> Sign Up</Link>
+      </div>
       </div>
     </div>
     </MotioAnimate>

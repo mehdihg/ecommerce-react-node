@@ -1,5 +1,4 @@
 
-import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { Link } from "react-router-dom"
 import * as data from '../../data'
@@ -60,14 +59,17 @@ const state=useSelector(state=>state.reducerCart.cart)
             data.products.map((item)=>{
                 return(
                     <MotioAnimate  key={item.id}>
-                    <div className="product-container">
-                        <div className="product">
-                        <img src={item.image} alt={item.name}  className="product-img"/>
 
-                        <Button className="product-button" onClick={()=>dispatch({type:AddToCart,payload:item})}>add to cart</Button>
+                    <div className="product-container">
+
+                        <div className="product">
+                        <h3 className="product-title">{item.name}</h3>
+                        <img src={item.image} alt={item.name}  className="product-img"/>
                         <Link to={`/products/${item.id}`}>
-                        <Button className="product-button">details</Button>
+                        <Button className="product-button" >details</Button>
                         </Link>
+                        <Button className="product-button" onClick={()=>dispatch({type:AddToCart,payload:item})}>add to cart</Button>
+                        
                         <div className="product-price">{item.price}$</div>
                                 
                         </div>
