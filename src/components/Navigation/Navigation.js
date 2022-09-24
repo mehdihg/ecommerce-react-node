@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import MobileNavigation from "../MobileNavigation/MobileNavigation";
 const Navigation = () => {
   const state = useSelector((state) => state.reducerCart);
+  const authState=useSelector(state=>state.AuthProvider.userData)
 
   return (
     <>
@@ -38,7 +39,7 @@ const Navigation = () => {
             </NavLink>
           </div>
           <NavLink
-            to="/login"
+            to={authState? "/profile" :"/login"}
             className={({ isActive }) => (isActive ? "activeNav" : "")}
           >
             <HiUser className="user_icon" />

@@ -1,4 +1,4 @@
-import { AddToCart, RemoveFromCart } from "./cartTypes";
+import { AddToCart, ClearCart, RemoveFromCart } from "./cartTypes";
 
 const initialState = {
   cart: [],
@@ -59,6 +59,14 @@ export const reducerCart = (state = initialState, action) => {
         };
       }
     }
+      case ClearCart:{
+        return{
+          cart: [],
+          total: 0,
+          totalPrice: 0,
+        }
+      }
+
     default:
       return state;
   }

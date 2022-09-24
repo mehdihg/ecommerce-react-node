@@ -3,7 +3,7 @@ import Input from "./Input/Input";
 
 import "react-toastify/dist/ReactToastify.css";
 import Button from "./Button/Button";
-import { ToastContainer } from "react-toastify";
+
 
 
 const Form = ({
@@ -33,17 +33,7 @@ const Form = ({
         </Button>
       </form>
 
-      <ToastContainer
-        position="bottom-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
+
     </>
   );
 };

@@ -8,6 +8,7 @@ import Product from "../components/Product/Product";
 import { AnimatePresence } from "framer-motion";
 import Cart from "../components/Cart/Cart";
 import Checkout from "../components/Checkout/Checkout";
+import Profile from "../components/Profile/Profile";
 const MainRoutes = () => {
   const location = useLocation();
   return (
@@ -21,6 +22,7 @@ const MainRoutes = () => {
         <Route path="/products/:id" element={<Product />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/profile" element={<Profile/>} />
       </Routes>
     </AnimatePresence>
   );

@@ -23,6 +23,7 @@
   width: 100%;
   background-color: transparent;
   font-size: 16px;
+  font-weight: bold;
   color: rgb(255, 255, 255);
   padding: 20px 10px;
   outline: none;
@@ -59,6 +60,7 @@
 .single-product-icon svg {
   font-size: 26px;
 }
+
 @media screen and (max-width: 768px) {
   .single-product {
     flex-direction: column;
@@ -93,4 +95,12 @@
   .single-product-content {
     width: 45%;
   }
+}
+@media screen and (max-width: 480px) {
+
+  .single-product-details h3 {
+    padding: 10px 2px 25px 2px;
+    font-size: 22px;
+  }
+
 }

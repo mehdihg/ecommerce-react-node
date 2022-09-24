@@ -72,7 +72,7 @@ const Cart = () => {
               <h4>Price:{state.totalPrice}$</h4>
               <h4 className="shipping-cart">Shipping:20$</h4>
               <h4>TotalPrice:{state.totalPrice + 20}$</h4>
-              <Link to="/checkout">
+              <Link to="/register?redirect=checkout">
                 <Button>Checkout</Button>
               </Link>
             </div>

@@ -8,14 +8,17 @@ import {
   TbCreditCard,
 } from "react-icons/tb";
 import "./Product.css";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { AddToCart } from "../../provider/CartProvider/cartTypes";
+import { notify } from "../../utils/notify";
 const Product = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const state = useSelector((state) => state.reducerCart.cart);
   const product = data.products.find((item) => item.id === Number(id));
-  console.log(state);
+  const AddProduct=(item)=>{
+    dispatch({ type: AddToCart, payload: item })
+    notify(`${item.name} added to cart`,'success')
+  }
   return (
     <div className="single-product-container">
       <div className="single-product">
@@ -23,7 +26,7 @@ const Product = () => {
           <img src={product.image} alt={product.name} />
           <Button
             className="single-product-button"
-            onClick={() => dispatch({ type: AddToCart, payload: product })}
+            onClick={() =>AddProduct(product)}
           >
             add to cart
           </Button>

@@ -1,7 +1,7 @@
 import { IoWarning } from "react-icons/io5";
 const Input = ({ formik, name, placeholder, type }) => {
   return (
-    <div className="input-container">
+    <div className="input-container register-input login-input">
       <input
         type={type}
         onChange={formik.handleChange}

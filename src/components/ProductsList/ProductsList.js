@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import * as data from "../../data";
 import { AddToCart } from "../../provider/CartProvider/cartTypes";
+import { notify } from "../../utils/notify";
 import Button from "../Form/Button/Button";
 import MotioAnimate from "../MotionAnimate/MotionAnimte";
 
@@ -9,7 +10,10 @@ import ProductSlider from "../ProductSlider/ProductSlider";
 import "./ProductsList.css";
 const ProductsList = () => {
   const dispatch = useDispatch();
-
+const AddProduct=(item)=>{
+  dispatch({ type: AddToCart, payload: item })
+  notify(`${item.name} added to cart`,'success')
+}
   return (
     <ProductSlider>
       {data.products.map((item) => {
@@ -24,7 +28,7 @@ const ProductsList = () => {
                 </Link>
                 <Button
                   className="product-button"
-                  onClick={() => dispatch({ type: AddToCart, payload: item })}
+                  onClick={()=>AddProduct(item)}
                 >
                   add to cart
                 </Button>
@@ -32,9 +36,11 @@ const ProductsList = () => {
                 <div className="product-price">{item.price}$</div>
               </div>
             </div>
+
           </MotioAnimate>
         );
       })}
+
     </ProductSlider>
   );
 };
